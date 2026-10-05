@@ -3,61 +3,119 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>9issa 9asira</title>
 
 <style>
 body {
-  font-family: Arial, sans-serif;
-  text-align: center;
-  padding: 50px 20px;
-  background: #f5f5f5;
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+    margin: 0;
+    padding: 25px;
+    color: #222;
+}
+
+.card {
+    max-width: 700px;
+    margin: auto;
+    background: white;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 4px 18px #0002;
 }
 
 h1 {
-  margin-bottom: 40px;
+    text-align: center;
+    margin-bottom: 30px;
 }
 
 button {
-  display: block;
-  width: 90%;
-  max-width: 400px;
-  margin: 20px auto;
-  padding: 18px;
-  font-size: 20px;
-  border: none;
-  border-radius: 12px;
-  cursor: pointer;
+    width: 100%;
+    padding: 17px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 14px;
+    font-size: 18px;
+    cursor: pointer;
 }
 
-.audio {
-  background: #222;
-  color: white;
+.audio-btn {
+    background: #222;
+    color: white;
 }
 
-.read {
-  background: white;
-  border: 2px solid #222;
+.text-btn {
+    background: white;
+    border: 2px solid #222;
+}
+
+#audioBox,
+#story {
+    display: none;
+}
+
+#story {
+    margin-top: 20px;
+    line-height: 1.9;
+    font-size: 17px;
+    white-space: pre-wrap;
+    direction: ltr;
+    text-align: left;
 }
 </style>
 </head>
 
 <body>
 
+<div class="card">
+
 <h1>9issa 9asira</h1>
 
-<button class="audio"
-onclick="document.getElementById('audio').play()">
+<button class="audio-btn" onclick="showAudio()">
 🔊 القصة مسموعة
 </button>
 
-<audio id="audio" controls style="width:90%;max-width:400px;">
-<source src="WhatsApp%20Ptt%202026-10-05%20at%204.30.48%20AM.ogg" type="audio/ogg">
-</audio>
-
-<button class="read"
-onclick="window.open('9isa%209asira%20fach%20maykon%203ndk%20maydar.odt','_blank')">
+<button class="text-btn" onclick="showText()">
 📖 القصة مكتوبة
 </button>
+
+<div id="audioBox">
+<audio controls style="width:100%; margin-top:15px;">
+<source src="WhatsApp%20Ptt%202026-10-05%20at%204.30.48%20AM.ogg" type="audio/ogg">
+</audio>
+</div>
+
+<div id="story">
+
+9isa 9asira fach maykon 3ndk maydar
+
+Ymkn anjik kantfla wla ayshabk baghi mnk chi haja walakin ana mabaghi walo baghi nrjeo ki kna ndwiw ndhko nchofk ou no9f meak wakha gha 5 min maerftch elach Kadiri haka wla ach kayshab lik ana bagi walakin ykon li kan rah makaynach chi haja.
+
+n9d njik las9k fik ymkn?
+
+Ou bssh hint frask 3rft wahd lhaja! makandnch emri bghit bsh bhal haka hint makntch kantkhayl gae ayji nhar anbghi bnt haka walakin jiti nti.
+
+Ymkn knt kantsahb gha bach ntsma rah msahb ou nbiyn ta ana ou kdaaa walakin maemri bghit kima bghitk.
+
+knt 9lt lik maerftch elach kanbghik yak ou bsh makntch earf jiti fwahd lo9ita li knt khawi rasi mn chi haja.
+
+</div>
+
+</div>
+
+<script>
+
+function showAudio() {
+    document.getElementById("audioBox").style.display = "block";
+    document.getElementById("story").style.display = "none";
+}
+
+function showText() {
+    document.getElementById("story").style.display = "block";
+    document.getElementById("audioBox").style.display = "none";
+}
+
+</script>
 
 </body>
 </html>
