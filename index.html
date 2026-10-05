@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>9issa 9asira</title>
+
+<style>
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 50px 20px;
+  background: #f5f5f5;
+}
+
+h1 {
+  margin-bottom: 40px;
+}
+
+button {
+  display: block;
+  width: 90%;
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 18px;
+  font-size: 20px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.audio {
+  background: #222;
+  color: white;
+}
+
+.read {
+  background: white;
+  border: 2px solid #222;
+}
+</style>
+</head>
+
+<body>
+
+<h1>9issa 9asira</h1>
+
+<button class="audio"
+onclick="document.getElementById('audio').play()">
+🔊 القصة مسموعة
+</button>
+
+<audio id="audio" controls style="width:90%;max-width:400px;">
+<source src="WhatsApp%20Ptt%202026-10-05%20at%204.30.48%20AM.ogg" type="audio/ogg">
+</audio>
+
+<button class="read"
+onclick="window.open('9isa%209asira%20fach%20maykon%203ndk%20maydar.odt','_blank')">
+📖 القصة مكتوبة
+</button>
+
+</body>
+</html>
